@@ -70,13 +70,13 @@ def get_gray_image():
     for file in ['positive_images']:
         for image in os.listdir(file):
             try:
-                image = cv2.imread('positive_images/ball.png', cv2.IMREAD_GRAYSCALE)
+                image = cv2.imread('positive_images/ball.jpeg', cv2.IMREAD_GRAYSCALE)
                 resized_image = cv2.resize(image, (100,100))
-                cv2.imwrite('positive_images/ball.png',resized_image)
+                cv2.imwrite('positive_images/ball.jpg',resized_image)
             except Exception as e:
                 print(str(e))
 
 # get_images()
 # find_bad_images()
 # create_pos_n_neg()
-# get_gray_image()
+get_gray_image()
