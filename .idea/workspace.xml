@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="846729af-e035-4dbd-aeb2-497759f35800" name="Default Changelist" comment="" />
+    <list default="true" id="846729af-e035-4dbd-aeb2-497759f35800" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +39,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
+            <state relative-caret-position="503">
               <caret line="63" column="41" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="41" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
@@ -63,6 +65,9 @@
       <replace>positive</replace>
     </replaceStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -73,11 +78,12 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1709" />
-    <option name="y" value="-628" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1400" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -152,16 +158,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1546608108675</updated>
-      <workItem from="1546608111309" duration="8855000" />
+      <workItem from="1546608111309" duration="9702000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8855000" />
+    <option name="totallyTimeSpent" value="9702000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-615" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
@@ -219,7 +224,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
+        <state relative-caret-position="503">
           <caret line="63" column="41" selection-start-line="63" selection-start-column="26" selection-end-line="63" selection-end-column="41" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
