@@ -2,6 +2,9 @@
 - Python ile nesnelerin haarcascade algoritmasiyla xml dosyasinin hazirlanmasi ve kamerada canli olacak tanimlanmasi projesi
 
 ## Kurulum
+- Download - [python-3.7.2.exe](https://www.python.org/ftp/python/3.7.2/python-3.7.2.exe)
+- İndirdikten sonra kurulumunu gerçekleştirin.
+- **Konsola Kodu Girin**
 - pip install opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
 - Download - [opencv_python-3.4.5-cp37-cp37m-win32.whl](https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/opencv_python-3.4.5-cp37-cp37m-win32.whl)
 - Download - [numpy-1.16.0rc2+mkl-cp37-cp37m-win32.whl](https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/numpy-1.16.0rc2+mkl-cp37-cp37m-win32.whl)
