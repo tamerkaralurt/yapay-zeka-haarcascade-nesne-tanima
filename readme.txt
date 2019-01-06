@@ -1,4 +1,4 @@
-# Kurulum
+####Kurulum
 pip install opencv-python
 pip install opencv-contrib-python
 pip install opencv-python-headless
