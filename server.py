@@ -88,5 +88,5 @@ def get_gray_image():
 
 # get_images()
 # find_bad_images()
-create_pos_n_neg()
+# create_pos_n_neg()
 # get_gray_image()
