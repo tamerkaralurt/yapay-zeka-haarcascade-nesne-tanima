@@ -27,7 +27,7 @@ licence_plate_rus_16stages_cascade = cv2.CascadeClassifier('haarcascades\haarcas
 russian_plate_number_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_russian_plate_number.xml')
 
 # Tennis Topu
-tennis_topu = cv2.CascadeClassifier('data/cascade.xml')
+tennis_topu = cv2.CascadeClassifier('cascade.xml')
 
 cap = cv2.VideoCapture(0)
 
@@ -37,11 +37,13 @@ while True:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     # Tennis Topu
-    balls = tennis_topu.detectMultiScale(gray, 20, 20)
+    balls = tennis_topu.detectMultiScale(gray, 90, 90)
     for (x, y, w, h) in balls:
         font = cv2.FONT_HERSHEY_SIMPLEX
-        # cv2.putText(img, 'Tennis Topu', (x-w, y-h), font, 0.5, (102, 51, 0), 2, cv2.LINE_AA)
+        cv2.putText(img, 'Tenis Topu', (x-5, y-5), font, 0.5, (102, 51, 0), 2, cv2.LINE_AA)
         cv2.rectangle(img, (x, y), (x + w, y + h), (102, 51, 0), 2)
+        roi_gray = gray[y:y + h, x:x + w]
+        roi_color = img[y:y + h, x:x + w]
 
     # Yüz Kısımları
 
@@ -121,7 +123,7 @@ while True:
     # for (facx, facy, facw, fach) in frontalcatface:
     #     cv2.rectangle(img, (facx, facy), (facx + facw, facy + fach), (238, 169, 184), 2)
 
-    cv2.imshow('img', img)
+    cv2.imshow('Kamera', img)
     k = cv2.waitKey(30) & 0xff
     if ((k == 27) or (k == 13) or (k == 32)):
         break
