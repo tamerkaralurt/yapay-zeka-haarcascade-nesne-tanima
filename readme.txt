@@ -7,7 +7,7 @@ image-net.org //resimlerin aldigi yer
 
 mkdir data
 mkdir info
-opencv_createsamples -img positive_images/ball.png -bg bg.txt -info info/info.lst -pngoutput info -maxxangle 0.5 -maxyangle -0.5 -maxzangle 0.5 -num 1282 //1282 dosya icindeki resim sayisi
+opencv_createsamples -img positive_images/*.png -bg bg.txt -info info/info.lst -pngoutput info -maxxangle 0.5 -maxyangle -0.5 -maxzangle 0.5 -num 15360 //3840 dosya icindeki resim sayisi
 opencv_createsamples -info info/info.lst -num 1282 -w 20 -h 20 -vec positives.vec
 opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1200 -numNeg 1000 -numStages 10 -w 20 -h 20
 

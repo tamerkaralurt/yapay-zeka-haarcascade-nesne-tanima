@@ -64,12 +64,14 @@ def create_pos_n_neg():
         for image in os.listdir(file):
             if file == "negatives_images":
                 line = file + '/' + image + '\n'
-                with open('bg.txt', 'a') as f:
+                with open('negative.txt', 'a') as f:
                     f.write(line)
 
-            elif file == 'positive_images':
-                line = file + '/' + image + ' 1 0 0 50 50\n'
-                with open('info.dat', 'a') as f:
+    for file in ['positive_images']:
+        for image in os.listdir(file):
+            if file == 'positive_images':
+                line = file + '/' + image + '\n'
+                with open('positive.txt', 'a') as f:
                     f.write(line)
 
 
@@ -86,5 +88,5 @@ def get_gray_image():
 
 # get_images()
 # find_bad_images()
-# create_pos_n_neg()
+create_pos_n_neg()
 # get_gray_image()
