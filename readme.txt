@@ -1,10 +1,13 @@
+# Kurulum
 pip install opencv-python
 pip install opencv-contrib-python
 pip install opencv-python-headless
 pip install opencv-contrib-python-headless
 
+# Resim Deposu
 image-net.org //resimlerin aldigi yer
 
+# Algoritmaya Nesne Tanitma Alani
 mkdir data
 mkdir info
 opencv_createsamples -img positive_images/*.png -bg bg.txt -info info/info.lst -pngoutput info -maxxangle 0.5 -maxyangle -0.5 -maxzangle 0.5 -num 15360 //3840 dosya icindeki resim sayisi
