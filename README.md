@@ -3,6 +3,10 @@
 
 ## Kurulum
 - pip install opencv-python opencv-contrib-python opencv-python-headless opencv-contrib-python-headless
+- Download - [opencv_python-3.4.5-cp37-cp37m-win32.whl](https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/opencv_python-3.4.5-cp37-cp37m-win32.whl)
+- Download - [numpy-1.16.0rc2+mkl-cp37-cp37m-win32.whl](https://download.lfd.uci.edu/pythonlibs/r5uhg2lo/numpy-1.16.0rc2+mkl-cp37-cp37m-win32.whl)
+- pip install opencv_python-3.4.5-cp37-cp37m-win32.whl
+- pip install numpy-1.16.0rc2+mkl-cp37-cp37m-win32.whl
 
 ## Resim Deposu
 - image-net.org //resimlerin aldigi yer
