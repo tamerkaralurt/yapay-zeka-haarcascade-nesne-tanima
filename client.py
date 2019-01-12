@@ -2,25 +2,25 @@ import numpy as np
 import cv2
 
 # Yüz
-face_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_default.xml')  #Eklendi
-eye_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_eye_tree_eyeglasses.xml')  #Eklendi
-lefteye_2splits_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_lefteye_2splits.xml')  #Eklendi
-righteye_2splits_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_righteye_2splits.xml')  #Eklendi
-profileface_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_profileface.xml')  #Eklendi
-smile_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_smile.xml')  #Eklendi
+face_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_default.xml')  # Eklendi
+eye_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_eye_tree_eyeglasses.xml')  # Eklendi
+lefteye_2splits_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_lefteye_2splits.xml')  # Eklendi
+righteye_2splits_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_righteye_2splits.xml')  # Eklendi
+profileface_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_profileface.xml')  # Eklendi
+smile_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_smile.xml')  # Eklendi
 
-frontalface_alt_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt.xml')  #Eklendi
-frontalface_alt_tree_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt_tree.xml')  #Eklendi
-frontalface_alt2_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt2.xml')  #Eklendi
+frontalface_alt_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt.xml')  # Eklendi
+frontalface_alt_tree_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt_tree.xml')  # Eklendi
+frontalface_alt2_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalface_alt2.xml')  # Eklendi
 
 # Vücut
-upper_body = cv2.CascadeClassifier('haarcascades\haarcascade_upperbody.xml')  #Eklendi
-lower_body = cv2.CascadeClassifier('haarcascades\haarcascade_lowerbody.xml')  #Eklendi
-full_body = cv2.CascadeClassifier('haarcascades\haarcascade_fullbody.xml')  #Eklendi
+upper_body = cv2.CascadeClassifier('haarcascades\haarcascade_upperbody.xml')  # Eklendi
+lower_body = cv2.CascadeClassifier('haarcascades\haarcascade_lowerbody.xml')  # Eklendi
+full_body = cv2.CascadeClassifier('haarcascades\haarcascade_fullbody.xml')  # Eklendi
 
 # Kedi
-frontalcat_face = cv2.CascadeClassifier('haarcascades\haarcascade_frontalcatface.xml')  #Eklendi
-frontalcatface_extended_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalcatface_extended.xml')  #Eklendi
+frontalcat_face = cv2.CascadeClassifier('haarcascades\haarcascade_frontalcatface.xml')  # Eklendi
+frontalcatface_extended_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_frontalcatface_extended.xml')  # Eklendi
 
 # Lisan
 licence_plate_rus_16stages_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_licence_plate_rus_16stages.xml')
@@ -36,11 +36,11 @@ while True:
 
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
-    # Tennis Topu
-    balls = tennis_topu.detectMultiScale(img, 15, 15)
+    ## Tennis Topu
+    balls = tennis_topu.detectMultiScale(img, 12, 12)
     for (x, y, w, h) in balls:
         font = cv2.FONT_HERSHEY_SIMPLEX
-        cv2.putText(img, 'Tenis Topu', (x-5, y-5), font, 0.5, (102, 51, 0), 2, cv2.LINE_AA)
+        cv2.putText(img, 'Tenis Topu', (x - 5, y - 5), font, 0.5, (102, 51, 0), 2, cv2.LINE_AA)
         cv2.rectangle(img, (x, y), (x + w, y + h), (102, 51, 0), 2)
 
     # Yüz Kısımları
