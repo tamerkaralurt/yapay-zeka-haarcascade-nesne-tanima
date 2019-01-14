@@ -98,21 +98,36 @@ def get_test_images():
 def find_bad_images():
     global negative_image_number
     global positive_image_number
-    for file in ['negatives_images']:
-       for image in os.listdir(file):
-           for bad in os.listdir('bad_images'):
-               try:
-                   current_image_path = str(file) + '/' + str(image)
-                   bad = cv2.imread('bad_images/' + str(bad))
-                   question = cv2.imread(current_image_path)
-                   if bad.shape == question.shape and not (np.bitwise_xor(bad, question).any()):
-                       print('Bad image!')
-                       print(current_image_path)
-                       os.remove(current_image_path)
-               except Exception as e:
-                   print(str(e))
 
-    for file in ['positive_images']:
+    # for file in ['negatives_images']:
+    #    for image in os.listdir(file):
+    #        for bad in os.listdir('bad_images'):
+    #            try:
+    #                current_image_path = str(file) + '/' + str(image)
+    #                bad = cv2.imread('bad_images/' + str(bad))
+    #                question = cv2.imread(current_image_path)
+    #                if bad.shape == question.shape and not (np.bitwise_xor(bad, question).any()):
+    #                    print('Bad image!')
+    #                    print(current_image_path)
+    #                    os.remove(current_image_path)
+    #            except Exception as e:
+    #                print(str(e))
+    #
+    # for file in ['positive_images']:
+    #     for image in os.listdir(file):
+    #         for bad in os.listdir('bad_images'):
+    #             try:
+    #                 current_image_path = str(file) + '/' + str(image)
+    #                 bad = cv2.imread('bad_images/' + str(bad))
+    #                 question = cv2.imread(current_image_path)
+    #                 if bad.shape == question.shape and not (np.bitwise_xor(bad, question).any()):
+    #                     print('Bad image!')
+    #                     print(current_image_path)
+    #                     os.remove(current_image_path)
+    #             except Exception as e:
+    #                 print(str(e))
+
+    for file in ['test_images']:
         for image in os.listdir(file):
             for bad in os.listdir('bad_images'):
                 try:
@@ -172,4 +187,4 @@ def sort_by_number():
 # find_bad_images()
 # create_pos_n_neg()
 # sort_by_number()
-get_test_images()
+# get_test_images()
