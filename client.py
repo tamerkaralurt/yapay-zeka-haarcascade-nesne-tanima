@@ -37,7 +37,7 @@ while True:
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
     ## Tennis Topu
-    balls = tennis_topu.detectMultiScale(img, 45, 45)
+    balls = tennis_topu.detectMultiScale(img, 40, 40)
     for (x, y, w, h) in balls:
         # font = cv2.FONT_HERSHEY_SIMPLEX
         # cv2.putText(img, 'Tenis Topu', (x - 5, y - 5), font, 0.5, (102, 51, 0), 2, cv2.LINE_AA)

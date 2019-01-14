@@ -5,6 +5,7 @@ import os
 
 negative_image_number = 1
 positive_image_number = 1
+test_image_number = 1
 
 def get_images():
     global negative_image_number
@@ -50,16 +51,16 @@ def get_images():
     if not os.path.exists('positive_images'):
         os.makedirs('positive_images')
 
-    # for i in positive_image_urls.split('\n'):
-    #     try:
-    #         print(i)
-    #         urllib.request.urlretrieve(i, 'positive_images/' + str(positive_image_number) + '.bmp')
-    #         image = cv2.imread('positive_images/' + str(positive_image_number) + '.bmp', cv2.IMREAD_GRAYSCALE)
-    #         resized_image = cv2.resize(image, (400, 400))
-    #         cv2.imwrite('positive_images/' + str(positive_image_number) + '.bmp', resized_image)
-    #         positive_image_number += 1
-    #     except Exception as e:
-    #         print(str(e))
+    for i in positive_image_urls.split('\n'):
+        try:
+            print(i)
+            urllib.request.urlretrieve(i, 'positive_images/' + str(positive_image_number) + '.bmp')
+            image = cv2.imread('positive_images/' + str(positive_image_number) + '.bmp', cv2.IMREAD_GRAYSCALE)
+            resized_image = cv2.resize(image, (400, 400))
+            cv2.imwrite('positive_images/' + str(positive_image_number) + '.bmp', resized_image)
+            positive_image_number += 1
+        except Exception as e:
+            print(str(e))
 
     for i in negative_image_urls.split('\n'):
         try:
@@ -69,6 +70,28 @@ def get_images():
             resized_image = cv2.resize(image, (400, 400))
             cv2.imwrite('negatives_images/' + str(negative_image_number) + '.jpg', resized_image)
             negative_image_number += 1
+        except Exception as e:
+            print(str(e))
+
+
+def get_test_images():
+    global test_image_number
+    # Positives
+    # http://www.image-net.org/api/text/imagenet.synset.geturls?wnid=n04409515 //Tennis Balls
+    test_images_link1 = 'http://www.image-net.org/api/text/imagenet.synset.geturls?wnid=n04409515'
+    test_image_urls1 = urllib.request.urlopen(test_images_link1).read().decode()
+    test_image_urls = test_image_urls1
+    if not os.path.exists('test_images'):
+        os.makedirs('test_images')
+
+    for i in test_image_urls.split('\n'):
+        try:
+            print(i)
+            urllib.request.urlretrieve(i, 'test_images/' + str(test_image_number) + '.bmp')
+            image = cv2.imread('test_images/' + str(test_image_number) + '.bmp', cv2.IMREAD_COLOR)
+            resized_image = cv2.resize(image, (400, 400))
+            cv2.imwrite('test_images/' + str(test_image_number) + '.bmp', resized_image)
+            test_image_number += 1
         except Exception as e:
             print(str(e))
 
@@ -148,4 +171,5 @@ def sort_by_number():
 # get_gray_image()
 # find_bad_images()
 # create_pos_n_neg()
-sort_by_number()
+# sort_by_number()
+get_test_images()
