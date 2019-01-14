@@ -27,7 +27,7 @@ licence_plate_rus_16stages_cascade = cv2.CascadeClassifier('haarcascades\haarcas
 russian_plate_number_cascade = cv2.CascadeClassifier('haarcascades\haarcascade_russian_plate_number.xml')
 
 # Tennis Topu
-tennis_topu = cv2.CascadeClassifier('cascade.xml')
+tennis_topu = cv2.CascadeClassifier('myhaar.xml')
 
 cap = cv2.VideoCapture(0)
 
